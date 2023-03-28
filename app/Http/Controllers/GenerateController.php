@@ -15,26 +15,6 @@ class GenerateController extends Controller
     }
 
     public function generateQrCode(Request $request){
-        $name = $request->input('name');
-        $linkedin = $request->input('linkedin');
-        $github = $request->input('github');
-        $msg = '';
-        $profileExists = Profile::where('name', $name)->first();
-        if (!$profileExists) {
-            $profile = new Profile;
-            $profile->name = $name;
-            $profile->linkedin = $linkedin;
-            $profile->github = $github;
-            $profile->save();
-        }else{
-            $msg = 'Profile already exists.';
-        }
-        
-        $options = new QROptions([
-            'version' => 5,
-            'outputType' => QRCode::OUTPUT_IMAGE_PNG,
-            'eccLevel' => QRCode::ECC_L,
-        ]);
         
         if ($msg!=''){
             return view('generate', ['qrcode' => $content, 'name' => $name, 'msg'=> 'Profile already exists.']);
