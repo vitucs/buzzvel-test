@@ -22,6 +22,6 @@ Route::get('/', function () {
 Route::get('/', [HomeController::class, 'index'])->name('/');
 
 Route::get('/generate', [GenerateController::class, 'index'])->name('generateIndex');
-Route::post('/generate', [GenerateController::class, 'generateQrCode']);
+Route::post('/generate', [GenerateController::class, 'generateQrCode'])->name('generateQrCode');
 
 Route::get('/profile/{name}', [ProfileController::class, 'index']);
