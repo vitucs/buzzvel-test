@@ -4,7 +4,7 @@
     <div class="container container-form">
         <h1>QR Code Image Generator</h1>
         @if (!isset($qrcode))
-        <form method="POST" action="{{ secure_url('generateQrCode') }}">
+        <form method="POST" action="{{ secure_url('generate') }}">
             @csrf
             <div class="form-group">
                 <label for="name">Name:</label>
