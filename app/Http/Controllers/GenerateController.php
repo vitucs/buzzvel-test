@@ -29,7 +29,7 @@ class GenerateController extends Controller
         }else{
             $msg = 'Profile already exists.';
         }
-        dd();
+        
         $options = new QROptions([
             'version' => 5,
             'outputType' => QRCode::OUTPUT_IMAGE_PNG,
@@ -39,6 +39,7 @@ class GenerateController extends Controller
         $qrCode = new QRCode($options);
         $qrCode->render("$name", $outputFile);
         $content = (string)$outputFile;
+        dd($content);
         if ($msg!=''){
             return view('generate', ['qrcode' => $content, 'name' => $name, 'msg'=> 'Profile already exists.']);
         }else{
