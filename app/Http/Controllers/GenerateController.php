@@ -18,7 +18,7 @@ class GenerateController extends Controller
         $name = $request->input('name');
         $linkedin = $request->input('linkedin');
         $github = $request->input('github');
-
+        $msg = '';
         $profileExists = Profile::where('name', $name)->first();
         if (!$profileExists) {
             $profile = new Profile;
@@ -26,6 +26,8 @@ class GenerateController extends Controller
             $profile->linkedin = $linkedin;
             $profile->github = $github;
             $profile->save();
+        }else{
+            $msg = 'Profile already exists.';
         }
         
         $options = new QROptions([
@@ -35,9 +37,13 @@ class GenerateController extends Controller
         ]);
         $outputFile = "qrcodes/$name.png";
         $qrCode = new QRCode($options);
-        $qrCode->render("localhost:8000/$name", $outputFile);
+        $qrCode->render("$name", $outputFile);
         $content = (string)$outputFile;
-        return view('generate', ['qrcode' => $content, 'name' => $name, 'msg'=> 'Profile already exists.']);
+        if ($msg!=''){
+            return view('generate', ['qrcode' => $content, 'name' => $name, 'msg'=> 'Profile already exists.']);
+        }else{
+            return view('generate', ['qrcode' => $content, 'name' => $name]);
+        }
     }
 
 }
