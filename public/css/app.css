@@ -1,0 +1,140 @@
+/* Estilos gerais */
+@font-face {
+    font-family: "RalewayRegular";
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "RalewayRegular";
+  }
+  
+  body {
+    margin: 0;
+    font-family: "RalewayRegular" !important;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+    background-color: #000 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Cabeçalho */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .header .logo {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .header .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .header .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header .menu li {
+    margin-left: 30px;
+  }
+  
+  .header .menu a {
+    color: #444;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .header .menu a:hover {
+    color: #0098db;
+  }
+  
+  header nav a {
+    color: white !important;
+  }
+  /* Banner */
+  .banner {
+    background-image: url(https://buzzvel.com/wp-content/uploads/2018/11/bg_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 200px 0;
+  }
+  
+  .banner h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .banner p {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+
+  .banner .container .readmore{
+    color: #fff;
+  }
+/* Rodapé */
+footer, .alert-box {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+footer div a{ 
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+}
+
+.container a, .container a:hover{
+    text-decoration: none;
+    color: red;
+    font-size: 24px;
+}
+
+.container span{
+    margin: 0 10px 0 0;
+}
+
+h1, h4, label, p{
+    color: white !important;
+}
+
+.container-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 30vh;
+    margin: 0 0 10vh 0;
+}
+
+.button-container{
+    text-align: center;
+}
+
+.qrcode img{
+    background-color: white;
+}
+
