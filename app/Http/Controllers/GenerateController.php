@@ -35,10 +35,7 @@ class GenerateController extends Controller
             'outputType' => QRCode::OUTPUT_IMAGE_PNG,
             'eccLevel' => QRCode::ECC_L,
         ]);
-        $outputFile = "qrcodes/$name.png";
-        $qrCode = new QRCode($options);
-        $qrCode->render("$name", $outputFile);
-        $content = (string)$outputFile;
+        
         if ($msg!=''){
             return view('generate', ['qrcode' => $content, 'name' => $name, 'msg'=> 'Profile already exists.']);
         }else{
