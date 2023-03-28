@@ -29,7 +29,7 @@ class GenerateController extends Controller
         }else{
             $msg = 'Profile already exists.';
         }
-        
+        dd();
         $options = new QROptions([
             'version' => 5,
             'outputType' => QRCode::OUTPUT_IMAGE_PNG,
