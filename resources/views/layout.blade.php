@@ -13,7 +13,7 @@
         <script>
         $(document).ready(function(){
             setTimeout(function(){
-            $("#my-alert").addClass("d-none");
+            $(".my-alert").addClass("d-none");
             }, 2000);
         });
         </script>
@@ -55,13 +55,13 @@
             @yield('content')
             @if (isset($msg))
             <div class="alert-box">
-                <div class="alert alert-danger" id="my-alert" role="alert">
+                <div class="alert alert-danger my-alert"role="alert">
                     {{$msg}}
                 </div>
             </div>
             @endif
             @if($errors->any())
-                <div class="alert alert-danger">
+                <div class="alert alert-danger my-alert">
                     <ul>
                         @foreach($errors->all() as $error)
                             <li>{{ $error }}</li>
