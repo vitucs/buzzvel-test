@@ -1,18 +1,20 @@
 FROM php:8.1.6-fpm-alpine
 
 ARG PHP_VERSION=8.1.6
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        php${PHP_VERSION} \
-        php${PHP_VERSION}-cli \
-        php${PHP_VERSION}-curl \
-        php${PHP_VERSION}-gd \
-        php${PHP_VERSION}-mbstring \
-        php${PHP_VERSION}-mysql \
-        php${PHP_VERSION}-pgsql \
-        php${PHP_VERSION}-sqlite3 \
-        php${PHP_VERSION}-xml \
-        php${PHP_VERSION}-zip
+RUN apk update && \
+    apk add --no-cache \
+        php8 \
+        php8-cli \
+        php8-curl \
+        php8-gd \
+        php8-mbstring \
+        php8-mysqlnd \
+        php8-pdo_mysql \
+        php8-pdo_pgsql \
+        php8-pdo_sqlite \
+        php8-pgsql \
+        php8-xml \
+        php8-zip
 
 
 COPY . /var/www/html
