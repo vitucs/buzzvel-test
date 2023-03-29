@@ -24,7 +24,7 @@ class GenerateController extends Controller
             $profile->linkedin = $linkedin;
             $profile->github = $github;
         } else {
-            $msg = 'Profile already exists.';
+            $msg = "Profile already exists. The first created '".$name."' was returned";
         }
         
         if ($msg != '') {
