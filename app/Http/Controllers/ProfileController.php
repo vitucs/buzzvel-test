@@ -17,4 +17,10 @@ class ProfileController extends Controller
         return view('profile', ['profile' => $profile, 'msg'=> $msg]);
     }
 
+    public function profiles()
+    {
+        $profiles = Profile::all();
+        return response()->json($profiles);
+    }
+
 }
