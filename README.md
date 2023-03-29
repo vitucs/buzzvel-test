@@ -1,8 +1,8 @@
-*Buzzvel Test*
+<h1>Buzzvel Test</h1>
 
 This is a simple Laravel project that implements a form for creating user profiles. It includes basic validation for the form fields and saves the data to a MySQL database.
 
-Requirements
+<h4>Requirements</h4>
 
 To run this project, you'll need the following installed on your system:
 
@@ -10,7 +10,7 @@ To run this project, you'll need the following installed on your system:
     MySQL 5.7 or higher
     Composer
 
-Installation
+<h4>Installation</h4>
 
     Clone this repository to your local machine using git clone.
     Navigate to the project directory and run composer install to install the project dependencies.
@@ -19,18 +19,18 @@ Installation
     Run php artisan migrate to create the necessary database tables.
     Start the development server by running php artisan serve.
 
-Usage
+<h4>Usage</h4>
 
 To use the application, navigate to the home page (/) and click on the "Generate" button. Fill out the form and click the "Generate Image" button to save your profile and generate the QR Code.
 
-License
+<h4>License</h4>
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
-Contributing
+<h4>Contributing</h4>
 
 Contributions are welcome! Please feel free to open an issue or submit a pull request.
 
-Acknowledgements
+<h4>Acknowledgements</h4>
 
 This project was created as part of the Buzzvel hiring process.
