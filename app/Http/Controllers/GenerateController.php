@@ -18,9 +18,8 @@ class GenerateController extends Controller
             'linkedin' => 'required|url',
             'github' => 'required|url',
         ]);
-        dd($validatedData);
         if(!$validatedData){
-            return redirect()->back()->withErrors($validatedData);
+            return redirect('/generate')->withErrors($validatedData);
         }
 
         $name = strtolower($request->input('name'));
