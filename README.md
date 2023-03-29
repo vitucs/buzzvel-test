@@ -2,6 +2,9 @@
 
 <p>This is a Laravel project that implements a form for creating user profiles. It includes basic validation for the form fields, saves the data to a MySQL database, simple tests with PHPUnit, docker and deploy.</p>
 
+<h2>Separating Docker</h2>
+<p>The project root with Dockerfile is at https://github.com/vitucs/docker-buzzvel-test and the image is at DockerHub like vitucs/buzzvel-test:1.0</p>
+
 <h2>Requirements</h2>
 
 <p>To run this project, you'll need the following installed on your system:</p>
