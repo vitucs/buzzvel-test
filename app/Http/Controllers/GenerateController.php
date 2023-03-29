@@ -18,6 +18,9 @@ class GenerateController extends Controller
             'linkedin' => 'required|url',
             'github' => 'required|url',
         ]);
+        if($validatedData){
+            return view('generate');
+        }
 
         $name = strtolower($request->input('name'));
         $linkedin = $request->input('linkedin');
