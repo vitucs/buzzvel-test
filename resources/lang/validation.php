@@ -120,10 +120,15 @@ return [
     */
 
     'custom' => [
+        'name' => [
+            'required' => 'The :attribute field is required.',
+        ],
         'linkedin' => [
+            'required' => 'The :attribute field is required.',
             'pattern' => 'The :attribute field must be a valid URL starting with http:// or https://.',
         ],
         'github' => [
+            'required' => 'The :attribute field is required.',
             'pattern' => 'The :attribute field must be a valid URL starting with http:// or https://.',
         ],
     ],
