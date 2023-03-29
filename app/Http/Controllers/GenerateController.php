@@ -36,8 +36,8 @@ class GenerateController extends Controller
             'eccLevel' => QRCode::ECC_L,
         ]);
         $outputFile = "qrcodes/$name.png";
-        dd($outputFile);
         $qrCode = new QRCode($options);
+        dd($qrCode);
         $qrCode->render("$name", $outputFile);
         $content = (string)$outputFile;
         
