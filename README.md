@@ -1,4 +1,4 @@
-Buzzvel Test
+*Buzzvel Test*
 
 This is a simple Laravel project that implements a form for creating user profiles. It includes basic validation for the form fields and saves the data to a MySQL database.
 
