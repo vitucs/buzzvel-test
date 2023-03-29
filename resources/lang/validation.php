@@ -120,8 +120,11 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'linkedin' => [
+            'pattern' => 'The :attribute field must be a valid URL starting with http:// or https://.',
+        ],
+        'github' => [
+            'pattern' => 'The :attribute field must be a valid URL starting with http:// or https://.',
         ],
     ],
 
@@ -136,5 +139,7 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'nome' => 'Name',
+    ],
 ];
