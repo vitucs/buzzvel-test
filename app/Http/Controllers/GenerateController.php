@@ -37,8 +37,11 @@ class GenerateController extends Controller
         ]);
         $outputFile = "qrcodes/$name.png";
         $qrCode = new QRCode($options);
-        $qrCode->render("$name", $outputFile);
-        dd($qrCode);
+        try {
+            $qrCode->render("$name", $outputFile);
+        } catch (Throwable $e) {
+            dd($e);
+        }
         $content = (string)$outputFile;
         
         if ($msg!=''){
