@@ -14,7 +14,7 @@
         $(document).ready(function(){
             setTimeout(function(){
             $(".my-alert").addClass("d-none");
-            }, 2000);
+            }, 3000);
         });
         </script>
 
