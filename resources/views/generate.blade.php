@@ -4,7 +4,7 @@
     <div class="container container-form">
         <h1>QR Code Image Generator</h1>
         @if (!isset($name))
-        <form method="POST" action="{{ url('generate') }}">
+        <form method="POST" action="{{ secure_url('generate') }}">
             @csrf
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -33,7 +33,7 @@
                         <h4>Scan Me</h4>
                         <a href='{{ secure_url("profile/$name") }}'>
                             <div class="mt-4 qrcode">
-                                <img src="{{(new \chillerlan\QRCode\QRCode())->render(secure_url('profile/$name'))}}" alt="QR Code">
+                                <img src='{{(new \chillerlan\QRCode\QRCode())->render(secure_url("profile/$name"))}}' alt="QR Code">
                             </div>
                         </a>
                     </div>
