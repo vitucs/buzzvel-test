@@ -13,6 +13,12 @@ class GenerateController extends Controller
     }
 
     public function generateQrCode(Request $request){
+        $validatedData = $request->validate([
+            'name' => 'required|min:4',
+            'linkedin' => 'required|url',
+            'github' => 'required|url',
+        ]);
+
         $name = strtolower($request->input('name'));
         $linkedin = $request->input('linkedin');
         $github = $request->input('github');

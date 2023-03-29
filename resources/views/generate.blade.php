@@ -8,15 +8,15 @@
             @csrf
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" minlength="4" required title="Enter a name with more than 4 characters">
+                <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="form-group">
                 <label for="linkedin">LinkedIn URL:</label>
-                <input type="text" class="form-control" id="linkedin" name="linkedin" pattern="https?://.+" required title="Enter a valid URL starting with http:// or https://">
+                <input type="text" class="form-control" id="linkedin" name="linkedin">
             </div>
             <div class="form-group">
                 <label for="github">GitHub URL:</label>
-                <input type="text" class="form-control" id="github" name="github" pattern="https?://.+" required title="Enter a valid URL starting with http:// or https://">
+                <input type="text" class="form-control" id="github" name="github">
             </div>
             <div class="button-container">
                 <button type="submit" class="btn btn-primary">Generate Image</button>
