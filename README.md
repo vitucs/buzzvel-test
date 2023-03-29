@@ -1,6 +1,6 @@
 <h1>Buzzvel Test</h1>
 
-This is a simple Laravel project that implements a form for creating user profiles. It includes basic validation for the form fields and saves the data to a MySQL database.
+This is a simple Laravel project that implements a form for creating user profiles. It includes basic validation for the form fields, saves the data to a MySQL database, simple tests with PHPUnit, docker and deploy.
 
 <h4>Requirements</h4>
 
@@ -34,3 +34,6 @@ Contributions are welcome! Please feel free to open an issue or submit a pull re
 <h4>Acknowledgements</h4>
 
 This project was created as part of the Buzzvel hiring process.
+
+<h4>Deploy</h4>
+The project is online on https://buzzvel-test.herokuapp.com, go check! :)
