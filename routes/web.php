@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GenerateController;
 use App\Http\Controllers\ProfileController;
+use Endroid\QrCode\QrCode;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

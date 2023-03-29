@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use chillerlan\QRCode\QRCode;
-use chillerlan\QRCode\QROptions;
 use App\Models\Profile;
 
 class GenerateController extends Controller
@@ -15,7 +13,7 @@ class GenerateController extends Controller
     }
 
     public function generateQrCode(Request $request){
-        $name = $request->input('name');
+        $name = strtolower($request->input('name'));
         $linkedin = $request->input('linkedin');
         $github = $request->input('github');
         $msg = '';
@@ -25,26 +23,15 @@ class GenerateController extends Controller
             $profile->name = $name;
             $profile->linkedin = $linkedin;
             $profile->github = $github;
-            $profile->save();
-        }else{
+        } else {
             $msg = 'Profile already exists.';
         }
         
-        $options = new QROptions([
-            'version' => 5,
-            'outputType' => QRCode::OUTPUT_IMAGE_PNG,
-            'eccLevel' => QRCode::ECC_L,
-        ]);
-        $outputFile = "qrcodes/$name.png";
-        $qrCode = new QRCode($options);
-        $qrCode->render("$name", $outputFile);
-        $content = (string)$outputFile;
-        
-        if ($msg!=''){
-            return view('generate', ['qrcode' => $content, 'name' => $name, 'msg'=> 'Profile already exists.']);
-        }else{
-            return view('generate', ['qrcode' => $content, 'name' => $name]);
+        if ($msg != '') {
+            return view('generate', ['name' => $name, 'msg' => $msg]);
+        } else {
+            $profile->save();
+            return view('generate', ['name' => $name]);
         }
-    }
-
+    } 
 }
