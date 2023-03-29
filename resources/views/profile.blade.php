@@ -11,7 +11,6 @@
                     <a href="{{$profile->linkedin}}" class="btn btn-lg btn-outline-primary"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
                     <a href="{{$profile->github}}" class="btn btn-lg btn-outline-primary"><i class="fab fa-github me-2"></i>GitHub</a>
                 </div>
-
 			</div>
 		</div>
 	</div>

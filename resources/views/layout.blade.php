@@ -61,6 +61,7 @@
             </div>
             @endif
             @if($errors->any())
+            <div class="alert-box">
                 <div class="alert alert-danger my-alert">
                     <ul>
                         @foreach($errors->all() as $error)
@@ -68,6 +69,7 @@
                         @endforeach
                     </ul>
                 </div>
+            </div>
             @endif
         </main>
         <footer class="footer mt-auto py-3">
